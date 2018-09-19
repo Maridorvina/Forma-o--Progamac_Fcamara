@@ -1,11 +1,22 @@
-<html>
-    <head>
-    
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
 
-    <body>
-  
+    <title>Calculo Salário</title>    
 
-    </body> 
+    <body>        
+        <script>
+            
+            var salarioMinimo = 950;
+            var salarioBruto = 1200;
+            
+            var salarioFuncionario = salarioMinimo + (salarioMinimo * (5/100));
+            
+            var quantidade = salarioFuncionario / salarioMinimo;          
+            
+            document.write(salarioFuncionario + "<br>");
+            document.write("O valor ganho por tempo é: " + quantidade);
+            
+        </script>        
+    </body>
 </html>
-
