@@ -1,61 +1,31 @@
-<html>
-    <head></head>
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
 
-    <body>
-        <p>1) Se você tivesse 5 diferentes arquivos de folhas de estilo, qual seria a melhor forma de integrá-los no site?</p>
+    <title>Calculo Salário</title>    
 
-        <p>2) Fale 3 formas de diminuir o page load (tempo de carregamento real e percebido).</p>
-            <p>R: 
-            Redimencionar e formatar corretamente as imagens para evitar que o carregamento da página fique pesada para a exibição das imagens. 
-            Minimizar o código ao máximo, compactando a base do código HTML, CSS e JavaScript compactando para otimizar a forma como são executados. Quanto menos solicitações fizer para o meu servidor, menor será o tempo para exibir a página.
-            Ativar o cache no navegador, que pode ajudar armazendo o navagamento dos arquivos localmente no navegador do usuário. Assim quando o site for visitado novamente alguns arquivo já estarão armazenados, sendo assim o usário vai baixar menos dados.</p>
-    
-            <p>3) Quais ferramentas você usa para testar a performance do seu código?</p>
-                <p>R:
+    <body>        
+        <script>
 
-                </p> 
-        
-        <p>4) Considere o HTML5 como uma plataforma web aberta. Quais são os blocos de construção de HTML5?</p>
-        <p>R: 
-        A sua estrutura de blocos de contrução começando pela tag inicial que é '<!DOCTYPE html>' que indica qual é a versão do HTML esta sendo utilizada.
-        Logo após vem a tag "<html>" e dentro dessa tag é necessário declarar outras duas como "<head>" e "<body>".
-        "A tag ""<head> é onde contém informações que são do interesse do navegador, e não de quem visita a página. Essa especificação é obrigatório que tenha a tag "<title>" que especifica a informação do documento, que será exibido na aba do documento.
-        Em seguida uma outra configuração muito utilizada, principalmente em documentos onde o idioma utilizado é o português, que contém carateres com acento e cedilha, é uma codificação chamada de 'charset'. Ela pode configurar qual codificação que será utilizada no documento na tag "<meta>". Recebe um dos valores mais usados hoje em dia que é 'UTF-8', esse valor é compatível principalmente com quase todos os idiomas do mundo.
-        Depois das descrições do documento temos a tag '<body>', que será o corpo da página, deve conter pelo menos um elemento filho que ou seja, uma ou mais tags dentro dele.
-        Neste caso seriam os titulos, subtítulos"<h1><h2><h3><h4><h5><h6>", parágrafos '<p>' e listas '<li>'.</p>
+            function mostra(frase) {
+                return document.write(frase);
+            }
 
-        <p>5) Você pode explicar a diferença entre GET e POST?</p>
-            <p>R:
+            function pegaValor(frase) {
+                return parseFloat(prompt (frase));
+                
+            }          
+            
+            var salarioMinimo = pegaValor("Digite o salário minimo: ");
+            var salarioBruto = pegaValor("Digite o salário bruto: ");
+            
+            var salarioFuncionario = salarioMinimo + (salarioMinimo * (5/100));
+            
+            var quantidade = salarioFuncionario / salarioMinimo;          
+            
+            mostra(salarioFuncionario + "<br>");
+            mostra("O valor ganho por tempo é: " + quantidade);
 
-            </p>
-
-        <p>6) Liste quantas propriedades display você puder lembrar.</p> 
-        <p>R: 
-        display: inline;
-        display: inline-block;</p>
-
-        <p>7) Qual a diferença entre inline e inline-block?</p>
-            <p>R: Na propriedade de posicionamento inline utilizando como exemplo no elemento <li> de uma <ul> que tem o valor padrão já definido como block para a propriedade display. Para que os elementos sejam posiscionados um ao lado do outro em uma linha horizontal, porém essa propriedade não pemrite que seja definido altura e largura (width e height), mas apenas em linha um ao lado do outro. 
-            No caso da propriedade inline-block terá a mesma funcionalidade que o display inline;
-            Mas porém ele irá permitir que possa ser definido a altura e largura, deixando todos em uma mesma linha.</p>
-
-        <p>8) Qual a diferença entre elementos posicionados de forma relativa, fixa, absoluta e estática?</p>
-            <p>R: Um elemento que é posicionado na forma estática permanecerá no lugar de origem no documento, se passar para esse elemento propriedades e coordenadas, as mesmas não serão respeitados.
-            O elemento posicionado na forma relativa obedece suas coordenadas em relação a sua posição original. Por exemplo: o elemento do meu documento recebe o valor de 'logotipo' no atributo classe e são definidos coordenadas de tamanho (pixels), então ele será reenderizado na em comparação a sua posição original.
-            No posicionamento de forma absoluta é posicionado de acordo com que seu tamanho não leva em conta para calcular o tamanho do elemento pai.
-            E por ultimo o elemento de forma fixa será reenderizado na página de acordo com posição indicada, mesmo que ocorra o rolagem o elemnto permanecerá no mesmo lugar.</p>
-
-        <p>9) Qual a diferença entre .call e .apply?</p> 
-
-        <p>10) Qual a diferença entre == e ===?</p> 
-
-    </body> 
+        </script>        
+    </body>
 </html>
-
-Como será a educação no futuro?
-
-Atualmente a educação já esta cada vez mais próxima do futuro, são milhares de ideias implementadas visando a questão do desenvolvimento pessoal, profissional e economico.
-Ainda existe uma porcentagem bem signitificativa que não esta visão de que a educação irá refletir e influenciar futuramente.
-Com a criação e a utilização de muitos recursos ajudam no ensino desde do inicio da vida do homem em diante, a tecnologia sempre esteve presente em nossas vidas a muitos séculos atrás e veio tomando cada vez mais um estrutura cada vez melhor.
-Muitas escolas, empresas, meios de transporte e até mesmo o setor alimenticio vem adotando esses recursos, através deles é utilizado metólogias para a inclusão,instrução e capacitação para melhor usabilidade e desenvolvimento geral.  
-
