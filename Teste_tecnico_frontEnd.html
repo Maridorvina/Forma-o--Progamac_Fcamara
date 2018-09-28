@@ -1,5 +1,8 @@
-<-- Obs: exemplos https://github.com/caelum/projeto01/blob/loteriaVariosNumeros--for/fichaAcademia.html -->
-<meta charset="UTF-8">
+<! DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<p>/* exemplos: github.com/caelum/projeto01/blob/loteriaVariosNumeros--for/fichaAcademia.html */</p>
 
 	Calcule o valor do salário
     <hr>
@@ -8,30 +11,41 @@
     Valor salário bruto
     <input>
     <button>Calcular</button><br><br>
-    <button>Limpar</button>          
+    <button>Limpar</button> 
+    <title>Calcula salário</title>
+</head>
+<body>
+
+    <script>
+                
+            var salarioFuncionario = Math.round();
+                
+            var input = document.querySelector('input');
+            input.focus();
+                
+            function verifica() {
+                if(input.value == salarioFuncionario) {
+                            
+                    alert("xazaam");
+                } else {
+                    alert("valor incorreto");
+                }
+                input.value = "";
+                input.focus(); 
+            }
+            var button = document.querySelector('button');
+            
+            button.onclick = verifica;
+            
+            document.write("<br><br>" + "Olá tudo beeeeeem?")
+            
+    </script>
+
+</body>
+</html>
+
+
+         
 	   
    
-<script>
-            
-		var salarioFuncionario = Math.round();
-			
-		var input = document.querySelector('input');
-		input.focus();
-			
-		function verifica() {
-			if(input.value == salarioFuncionario) {
-						
-				alert("xazaam");
-			} else {
-				alert("valor incorreto");
-			}
-			input.value = "";
-			input.focus(); 
-		}
-		var button = document.querySelector('button');
-		
-		button.onclick = verifica;
-		
-        document.write("<br><br>" + "Olá tudo beeeeeem?")
-		
-</script>        
+        
