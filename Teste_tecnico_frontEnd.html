@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-
-    <title>Calculo Salário</title>    
-
-    <body>        
+<head>
+    <meta charset="UTF-8">
+    <title>Calcula Salário</title>
+</head>
+    <body>
+    <h2>Calcule aqui o valor do salário a receber</h2>   
+    <hr>
+    Valor salário
+    <input/><br><br><br>
+    Valor salário bruto
+    <input/>
+    <hr>
+	<button>Calcular</button>
+    <button>Limpar</button>
+    
         <script>
+                    
+                var salarioFuncionario = Math.round();
+                    
+                var input = document.querySelector('input');
+                input.focus();
+                    
+                function verifica() {
 
-            function mostra(frase) {
-                return document.write(frase);
-            }
+                    if(input.value == salarioFuncionario) {
+                                
+                        alert("xazaam");
+                    } else {
+                        alert("valor incorreto");
+                    }
 
-            function pegaValor(frase) {
-                return parseFloat(prompt (frase));
+                    input.value = "";
+                    input.focus(); 
+                }
+
+                var button = document.querySelector('button');
                 
-            }          
-            
-            var salarioMinimo = pegaValor("Digite o salário minimo: ");
-            var salarioBruto = pegaValor("Digite o salário bruto: ");
-            
-            var salarioFuncionario = salarioMinimo + (salarioMinimo * (5/100));
-            
-            var quantidade = salarioFuncionario / salarioMinimo;          
-            
-            mostra(salarioFuncionario + "<br>");
-            mostra("O valor ganho por tempo é: " + quantidade);
-
-        </script>        
+                button.onclick = verifica;
+                
+                document.write("<br><br>" + "Olá tudo beeem?");
+                
+        </script>    
     </body>
 </html>
+
+
